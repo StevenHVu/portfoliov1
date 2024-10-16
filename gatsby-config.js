@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
       title: "My Gatsby Site",
       description: "A great site built with Gatsby",
-      author: "Your Name",
+      author: "Steven Vu",
     },
     plugins: [
       {
@@ -15,6 +15,7 @@ module.exports = {
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
       `gatsby-plugin-react-helmet`,
+      `gatsby-plugin-sass`
     ],
   }
   
