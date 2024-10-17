@@ -1,8 +1,10 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import './layout.scss'
 
-const Layout = ({pageTitle, children }) => {
+const Layout = ({ children }) => {
     return (
+        <>
         <div className="layout">
             {/* Homepage Menu */}
             <div className="icon-container">
@@ -13,19 +15,18 @@ const Layout = ({pageTitle, children }) => {
             {/* Navigation Menu */}
             <nav className="layout-links">
                 <ul>
-                    <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About Me</Link></li>
                     <li><Link to="/portfolio">Portfolio</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </nav>
-            
-            {/* Main Content */}
-            <main>
-                <h1>{pageTitle}</h1>
-                {children}
-            </main>
         </div>
+
+        {/* Page content */}
+        <div className="page-content">
+            {children}
+        </div>
+        </>
     )
 }
 

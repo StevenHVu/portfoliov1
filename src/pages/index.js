@@ -5,12 +5,14 @@ import Layout from '../components/layout'
 // component definition
 const Index = () => {
     return (
-        <div className="background-section">
-            <div className="center-content">
-                <Layout pageTitle="STEVEN VU"/>
-                <h2>Aspiring Software Engineer</h2>
+        <Layout>
+            <div className="home-container">
+                <div className="background-section">
+                    <h1>Steven Vu</h1>
+                    <h2>Aspiring Software Engineer</h2>
+                </div>
             </div>
-        </div>
+        </Layout>
     )
 }
 

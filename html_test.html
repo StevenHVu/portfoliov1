@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScrollY Test</title>
+  <style>
+    body {
+      height: 200vh; /* Ensure page is tall enough to scroll */
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>ScrollY: <span id="scroll-value">0</span></h1>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY; // Get the scroll position
+      console.log(`Scroll position: ${scrollY}`); // Log to console
+
+      // Update the text in the <span> with the current scrollY value
+      document.getElementById("scroll-value").textContent = scrollY;
+    });
+  </script>
+</body>
+</html>

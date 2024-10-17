@@ -1,26 +1,24 @@
 import * as React from 'react'
-import Layout from '../components/layout'
-
+import Layout from '../components/layout.js'
+import '../components/about.scss'
 
 const About = () => {
     return (
-        <>
-        {/* Background Section */}
-        <div className="background-section">
-            <div className="center-content">
-                <Layout pageTitle="About Me"/>
-                <h2>A little bit about me...</h2>
-            </div>
-        </div>
-        
-        {/* Content Section */}
-        <div className="background-section">
-            <div className="center-content">
-                <Layout pageTitle="About Me"/>
-                <h2>A little bit about me...</h2>
-            </div>
-        </div>
-        </>
+        <Layout>
+                {/* Background Section */}
+                <div className="background-section">
+                    <h1>About Me</h1>
+                </div>
+
+                {/* Profile Section */}
+                <div className="profile-section">
+                    <img src="/profile.png" alt="profile" className="profile-image"/>
+                    <div className="profile-text">
+                        <h2> Hello, I'm Steven Vu</h2>
+                        <p>I like One Piece.</p>
+                    </div>
+                </div>
+        </Layout>
     )
 }
 
