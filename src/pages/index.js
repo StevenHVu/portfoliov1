@@ -8,8 +8,8 @@ const Index = () => {
         <Layout>
             <div className="home-container">
                 <div className="background-section">
-                    <h1>Steven Vu</h1>
-                    <h2>Aspiring Software Engineer</h2>
+                    <h1>Creating impactful software solutions through innovation and expertise.</h1>
+                    <h2>View my portfolio. Learn more about me. Get in touch.</h2>
                 </div>
             </div>
         </Layout>

@@ -5,7 +5,7 @@
 
 // global.scss
 $primary-color: white;
-$secondary-color: #e0e0e0;
+$secondary-color: #bababa;
 $hover-color: #919191;
 
 *
@@ -37,11 +37,12 @@ body {
 .background-section {
     // positioning + area
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 50px);
 
     // background
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.15)), url('/background.jpg'); /* Adjust path as needed */
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     background-blend-mode: darken;
     background-repeat: no-repeat;
@@ -64,23 +65,20 @@ body {
     color: $primary-color;
 }
 
-
 h1 {
+    width: 75%;
     color: $primary-color;
     text-align: center;
-    font-size: 7rem;
-    font-weight: 100;
-    margin-bottom: 1rem;
+    font-size: 6rem;
+    font-weight: 300;
 }
 
 h2, h3, h4, h5, h6 {
+    width: 66%;
     color: $secondary-color;
     font-size: 3rem;
-    font-weight: 100;
-    margin-bottom: 1rem;
+    font-weight: 300;
     text-align: center;
-    
-    
 }
 
 // /* Layout and Containers */
@@ -111,5 +109,3 @@ h2, h3, h4, h5, h6 {
         padding: 0 1rem;
     }
 }
-  
-

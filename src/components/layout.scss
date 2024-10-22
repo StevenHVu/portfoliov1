@@ -1,4 +1,8 @@
 .layout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     min-height: 50px;
     background-color: black;
 
@@ -8,6 +12,7 @@
     position: absolute;
     top: 13px;  /* Slight margin from the top */
     right: 3rem; /* Slight margin from the right */
+    z-index: 1;
 }
 
 .layout-links ul {
@@ -66,7 +71,7 @@ nav ul {
 }
 
 nav a {
-    color: #e0e0e0;
+    color: #bababa;
     font-weight: bold;
     text-decoration: none;
 
