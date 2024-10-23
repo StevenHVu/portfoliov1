@@ -5,6 +5,7 @@
     width: 100%;
     min-height: 50px;
     background-color: black;
+    z-index: 1;
 
 }
 
@@ -12,7 +13,6 @@
     position: absolute;
     top: 13px;  /* Slight margin from the top */
     right: 3rem; /* Slight margin from the right */
-    z-index: 1;
 }
 
 .layout-links ul {
@@ -67,7 +67,7 @@ nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    padding: 1rem;
+    padding: 1rem; 
 }
 
 nav a {
