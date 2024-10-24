@@ -1,7 +1,10 @@
 .h1-about {
     font-size: 12vh;
-    width: 75%;
     font-weight: 100;
+}
+
+.h2-about {
+    font-weight: 200;
 }
 
 .arrow-container {
@@ -27,6 +30,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+    width: 40%;
+
+    position: absolute;
+    left: 30%;
 }
 
 .profile-section-title {
