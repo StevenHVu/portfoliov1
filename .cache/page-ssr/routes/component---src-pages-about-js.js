@@ -1955,43 +1955,58 @@ function stripPrefix(str, prefix = ``) {
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-plugin-smoothscroll/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/gatsby-plugin-smoothscroll/index.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ "./src/components/fade.js":
+/*!********************************!*\
+  !*** ./src/components/fade.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _fade_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fade.scss */ "./src/components/fade.scss");
+/* harmony import */ var _fade_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fade_scss__WEBPACK_IMPORTED_MODULE_1__);
+// src/components/fade.js
 
+ // Import the CSS animation styles
 
-exports.__esModule = true;
-exports["default"] = void 0;
+const Fade = ({
+  children,
+  delay = 0
+}) => {
+  const {
+    0: isVisible,
+    1: setIsVisible
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false); // Tracks visibility state
+  const domRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(); // Tracks the element being observed
 
-/**
- * Smooth scrolling onClick event handler
- * @param {string} selector argument will be passed to `querySelector`, usually an HTML id
- * @param {string} [blockPosition='start'] argument will be used to determine position where will be scrolled to (start, center, end, nearest)
- * @returns {boolean} false if `document.querySelector` doesn't find a match, otherwise true
- */
-var scrollTo = function scrollTo(selector, blockPosition) {
-  if (blockPosition === void 0) {
-    blockPosition = 'start';
-  }
-  var element = document.querySelector(selector);
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: blockPosition
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Use delay prop here to stagger animation
+          setTimeout(() => setIsVisible(true), delay);
+          observer.unobserve(entry.target); // stop observing after visible
+        }
+      });
     });
-    return true;
-  }
-  if (true) {
-    console.warn("gatsby-plugin-smoothscroll:\n The selector: '%s' wasn't found in the document.\n Make sure you pass in a valid CSS selector string.", selector);
-  }
-  return false;
+    if (domRef.current) observer.observe(domRef.current); // start observing
+    return () => observer.disconnect(); // cleanup on unmount
+  }, [delay]); // make sure useEffect listens to changes in 'delay'
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    ref: domRef,
+    className: `fade-in-up ${isVisible ? 'show' : ''}`,
+    style: {
+      transitionDelay: `${delay}s`
+    } // ensure CSS delay matches
+  }, children);
 };
-var _default = scrollTo;
-exports["default"] = _default;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Fade);
 
 /***/ }),
 
@@ -2033,8 +2048,8 @@ const Layout = ({
     to: "/about"
   }, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/portfolio"
-  }, "Portfolio")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: "/contact"
+  }, "Portfolio")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "mailto:vuhoangsteven@gmail.com"
   }, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "page-content"
   }, children));
@@ -2060,65 +2075,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout.js */ "./src/components/layout.js");
 /* harmony import */ var _components_about_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/about.scss */ "./src/components/about.scss");
 /* harmony import */ var _components_about_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_about_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var gatsby_plugin_smoothscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-plugin-smoothscroll */ "./node_modules/gatsby-plugin-smoothscroll/index.js");
+/* harmony import */ var _components_fade_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/fade.js */ "./src/components/fade.js");
 
 
 
+
+// import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const About = () => {
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const fadeInElements = document.querySelectorAll('.fade-in-up');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      });
-      fadeInElements.forEach(el => observer.observe(el));
-      return () => observer.disconnect(); // Cleanup on unmount
-    }
-  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "background-section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    delay: 0
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
-    className: "h1-about fade-in-up"
-  }, "STEVEN VU"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    className: "fade-in-up"
-  }, "Aspiring Software Engineer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    className: "fade-in-up"
-  }, "Security Enthusiast"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#profile-section",
-    className: "arrow-container fade-in-up",
-    onClick: () => {
-      (0,gatsby_plugin_smoothscroll__WEBPACK_IMPORTED_MODULE_3__["default"])('#profile-section');
-    },
-    "aria-label": "Scroll down"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    className: "arrow-down bobble",
-    src: "/arrow_down.png",
-    alt: "scroll-down"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "h1-about"
+  }, "STEVEN VU")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    delay: 0.6
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "h2-about"
+  }, "Aspiring Software Engineer")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    delay: 1.2
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "h2-about"
+  }, "Security Enthusiast"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "profile-section",
     id: "profile-section"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    className: "profile-section-title fade-in-up"
-  }, "A LITTLE BIT ABOUT ME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    className: "profile-picture fade-in-up",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "profile-section-title"
+  }, "A LITTLE BIT ABOUT ME")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "profile-picture",
     src: "/profile.jpg",
     alt: "profile"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: "fade-in-up"
-  }, "Hi, I\u2019m Steven Vu, a passionate software developer with a knack for building secure, scalable, and efficient solutions. I thrive at the intersection of development and security, specializing in DevSecOps\u2014integrating security into every step of the development lifecycle to ensure robust and reliable software."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: "fade-in-up"
-  }, "From planning and writing code to automating deployments and monitoring systems, I enjoy the entire journey of bringing ideas to life. I believe that security should empower innovation, not hinder it, and I aim to bridge the gap between fast development and strong security practices. Whether I\u2019m developing APIs, setting up CI/CD pipelines, or automating security checks, my focus is always on delivering high-quality, secure products."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: "fade-in-up"
-  }, "When I\u2019m not coding or configuring tools, I enjoy learning new technologies, solving challenges, and staying up-to-date with trends in cloud infrastructure, automation, and software security."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: "fade-in-up"
-  }, "Let\u2019s build something great\u2014secure by design and ready to scale!")));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Hi, I\u2019m Steven Vu, a software developer that has a passion for building secure, scalable, and efficient solutions. I graduated with a B.S. in Computer Science and a Certificate of Cybersecurity from Oregon State University. I thrive at the intersection of development and security, specializing in DevSecOps\u2014integrating security into every step of the development lifecycle to ensure robust and reliable software.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "From planning and writing code to automating deployments and monitoring systems, I enjoy the process of converting theoretical ideas into reality. I believe that security should empower innovation, not hinder it, and I aim to bridge the gap between fast development and strong security practices. Whether I\u2019m developing APIs, setting up CI/CD pipelines, or automating security checks, my focus is always on delivering high-quality, secure products.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "When I\u2019m not coding, I enjoy watching educational videos, working out, and practicing piano."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "passion-section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
 };
-const Head = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "About Me");
+const Head = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "Steven Vu");
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
 /***/ }),
@@ -2965,6 +2957,16 @@ function instanceOfHashable(object) {
 /*!***********************************!*\
   !*** ./src/components/about.scss ***!
   \***********************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./src/components/fade.scss":
+/*!**********************************!*\
+  !*** ./src/components/fade.scss ***!
+  \**********************************/
 /***/ (() => {
 
 

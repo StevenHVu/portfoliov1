@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
                 <ul>
                     <li><Link to="/about">About Me</Link></li>
                     <li><Link to="/portfolio">Portfolio</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><a href="mailto:vuhoangsteven@gmail.com">Contact</a></li>
                 </ul>
             </nav>
         </div>

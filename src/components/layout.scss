@@ -80,5 +80,7 @@ nav a {
     }
 }
 
-// .page-content {
-// }
+.page-content {
+    display: flex;
+    flex-direction: column;
+}

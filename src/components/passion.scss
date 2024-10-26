@@ -1,0 +1,21 @@
+// passion.scss
+.passion-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: auto;
+    padding: 5vh;
+    background-color: rgb(237, 237, 237);
+}
+
+.passion-title {
+    color: black;
+}
+
+.passion-image {
+    width: 10vh;
+    height: 10vh;
+}
+
+.passion-description {
+    color: black;
+}

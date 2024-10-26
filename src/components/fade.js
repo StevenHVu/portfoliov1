@@ -12,20 +12,20 @@ const Fade = ({ children, delay = 0 }) => {
                 if (entry.isIntersecting) {
                     // Use delay prop here to stagger animation
                     setTimeout(() => setIsVisible(true), delay);
-                    observer.unobserve(entry.target); // Stop observing after visible
+                    observer.unobserve(entry.target); // stop observing after visible
                 }
             });
         });
 
-        if (domRef.current) observer.observe(domRef.current); // Start observing
-        return () => observer.disconnect(); // Cleanup on unmount
-    }, [delay]); // Make sure useEffect listens to changes in 'delay'
+        if (domRef.current) observer.observe(domRef.current); // start observing
+        return () => observer.disconnect(); // cleanup on unmount
+    }, [delay]); // make sure useEffect listens to changes in 'delay'
 
     return (
         <div 
             ref={domRef} 
             className={`fade-in-up ${isVisible ? 'show' : ''}`} 
-            style={{ transitionDelay: `${delay}s` }} // Ensure CSS delay matches
+            style={{ transitionDelay: `${delay}s` }} // ensure CSS delay matches
         >
             {children}
         </div>

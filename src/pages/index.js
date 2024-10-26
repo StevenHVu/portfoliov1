@@ -29,7 +29,7 @@ const Index = () => {
 }
 
 // Head component
-export const Head = () => <title>Home</title>
+export const Head = () => <title>Steven Vu</title>
 
 // export component
 export default Index;

@@ -1955,6 +1955,61 @@ function stripPrefix(str, prefix = ``) {
 
 /***/ }),
 
+/***/ "./src/components/fade.js":
+/*!********************************!*\
+  !*** ./src/components/fade.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _fade_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fade.scss */ "./src/components/fade.scss");
+/* harmony import */ var _fade_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fade_scss__WEBPACK_IMPORTED_MODULE_1__);
+// src/components/fade.js
+
+ // Import the CSS animation styles
+
+const Fade = ({
+  children,
+  delay = 0
+}) => {
+  const {
+    0: isVisible,
+    1: setIsVisible
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false); // Tracks visibility state
+  const domRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(); // Tracks the element being observed
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Use delay prop here to stagger animation
+          setTimeout(() => setIsVisible(true), delay);
+          observer.unobserve(entry.target); // stop observing after visible
+        }
+      });
+    });
+    if (domRef.current) observer.observe(domRef.current); // start observing
+    return () => observer.disconnect(); // cleanup on unmount
+  }, [delay]); // make sure useEffect listens to changes in 'delay'
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    ref: domRef,
+    className: `fade-in-up ${isVisible ? 'show' : ''}`,
+    style: {
+      transitionDelay: `${delay}s`
+    } // ensure CSS delay matches
+  }, children);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Fade);
+
+/***/ }),
+
 /***/ "./src/components/layout.js":
 /*!**********************************!*\
   !*** ./src/components/layout.js ***!
@@ -1993,8 +2048,8 @@ const Layout = ({
     to: "/about"
   }, "About Me")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/portfolio"
-  }, "Portfolio")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: "/contact"
+  }, "Portfolio")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "mailto:vuhoangsteven@gmail.com"
   }, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "page-content"
   }, children));
@@ -2017,13 +2072,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
+/* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout.js */ "./src/components/layout.js");
+/* harmony import */ var _components_fade_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/fade.js */ "./src/components/fade.js");
+
 
 
 const Portfolio = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
     pageTitle: "Portfolio"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Greetings!"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "background-section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Greetings!"))));
 };
 const Head = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "Portfolio");
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Portfolio);
@@ -2865,6 +2924,16 @@ function instanceOfHashable(object) {
     return typeof object.toHashableString === 'function';
 }
 //# sourceMappingURL=typeGuess.js.map
+
+/***/ }),
+
+/***/ "./src/components/fade.scss":
+/*!**********************************!*\
+  !*** ./src/components/fade.scss ***!
+  \**********************************/
+/***/ (() => {
+
+
 
 /***/ }),
 
