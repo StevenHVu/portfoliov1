@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/passion.scss'
+import Fade from '../components/fade.js'
 
 const PassionEntry = ({title, url, description}) => {
     return (
@@ -10,14 +11,18 @@ const PassionEntry = ({title, url, description}) => {
             </div>
             
             {/* Title */}
-            <div>
-                <h2 className="passion-text">{title}</h2>
-            </div>
+            <Fade>
+                <div>
+                    <h2 className="passion-text">{title}</h2>
+                </div>
+            </Fade>
 
             {/* Description */}
-            <div>
-                <p className="passion-description">{description}</p>
-            </div>
+            <Fade>
+                <div>
+                    <p className="passion-description">{description}</p>
+                </div>
+            </Fade>
         </>
     )
 }

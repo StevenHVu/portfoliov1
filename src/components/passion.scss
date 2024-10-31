@@ -1,21 +1,41 @@
 // passion.scss
 .passion-section {
+    position: relative;
+    left: 15%;
+
+    width: 70%;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    padding-bottom: 4vh;
+
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: auto;
-    padding: 5vh;
-    background-color: rgb(237, 237, 237);
+    grid-template-columns: 1ft 1fr 1fr;
+    gap: 0;
+    background-color: rgb(244, 244, 244);
 }
 
 .passion-title {
     color: black;
 }
 
+.passion-text {
+    color: black;
+    font-size: 3vh;
+    font-weight: 100;
+}
+
 .passion-image {
-    width: 10vh;
-    height: 10vh;
+    width: 8vh;
+    height: 8vh;
+    margin-top: 4vh;
+    margin-bottom: 1vh;
 }
 
 .passion-description {
+    position: relative;
+    left: 17%;
+    text-align: center;
     color: black;
+    width: 66%;
+    margin: 0;
 }

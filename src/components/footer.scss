@@ -1,0 +1,36 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .footer-socials {
+            a {                    
+                margin: 0 10px;
+                img {
+                    width: 2rem;
+                    height: 2rem;
+    
+                    object-fit: cover;
+                    border: #a0a0a0 outset;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 10px;
+
+        p {
+            color: white;
+            font-size: 1rem;
+            font-weight: 100;
+            margin: 0;
+        }
+    }
+}

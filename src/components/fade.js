@@ -1,10 +1,9 @@
-// src/components/fade.js
 import React, { useState, useEffect, useRef } from 'react';
-import './fade.scss'; // Import the CSS animation styles
+import './fade.scss';
 
 const Fade = ({ children, delay = 0 }) => {
-    const [isVisible, setIsVisible] = useState(false); // Tracks visibility state
-    const domRef = useRef(); // Tracks the element being observed
+    const [isVisible, setIsVisible] = useState(false); // tracks visibility state
+    const domRef = useRef(); // track the element being observed
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {

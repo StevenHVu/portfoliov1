@@ -2058,6 +2058,42 @@ const Layout = ({
 
 /***/ }),
 
+/***/ "./src/components/passion.js":
+/*!***********************************!*\
+  !*** ./src/components/passion.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_passion_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/passion.scss */ "./src/components/passion.scss");
+/* harmony import */ var _components_passion_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_passion_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const PassionEntry = ({
+  title,
+  url,
+  description
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "passion-image",
+    src: `${url}`,
+    alt: "passion"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
+    className: "passion-text"
+  }, title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "passion-description"
+  }, description)));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PassionEntry);
+
+/***/ }),
+
 /***/ "./src/pages/about.js?export=default":
 /*!*******************************************!*\
   !*** ./src/pages/about.js?export=default ***!
@@ -2076,11 +2112,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_about_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/about.scss */ "./src/components/about.scss");
 /* harmony import */ var _components_about_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_about_scss__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_fade_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/fade.js */ "./src/components/fade.js");
+/* harmony import */ var _components_passion_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/passion.js */ "./src/components/passion.js");
+/* harmony import */ var _images_speedometer_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/speedometer.png */ "./src/images/speedometer.png");
+
 
 
 
 
 // import scrollTo from 'gatsby-plugin-smoothscroll';
+
 
 const About = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -2106,9 +2146,21 @@ const About = () => {
     className: "profile-picture",
     src: "/profile.jpg",
     alt: "profile"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Hi, I\u2019m Steven Vu, a software developer that has a passion for building secure, scalable, and efficient solutions. I graduated with a B.S. in Computer Science and a Certificate of Cybersecurity from Oregon State University. I thrive at the intersection of development and security, specializing in DevSecOps\u2014integrating security into every step of the development lifecycle to ensure robust and reliable software.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "From planning and writing code to automating deployments and monitoring systems, I enjoy the process of converting theoretical ideas into reality. I believe that security should empower innovation, not hinder it, and I aim to bridge the gap between fast development and strong security practices. Whether I\u2019m developing APIs, setting up CI/CD pipelines, or automating security checks, my focus is always on delivering high-quality, secure products.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "When I\u2019m not coding, I enjoy watching educational videos, working out, and practicing piano."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Hi, I\u2019m Steven Vu, a software developer that has a passion for building secure, scalable, and efficient solutions. I graduated with a B.S. in Computer Science and a Certificate of Cybersecurity from Oregon State University. I specialize in DevSecOps, integrating security at every step of development to ensure robust and reliable software.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "From planning and writing code to automating deployments and monitoring systems, I enjoy the process of converting theoretical ideas into reality. I believe that security should empower innovation, not hinder it, and I aim to bridge the gap between fast development and strong security practices. Whether I\u2019m developing APIs, setting up CI/CD pipelines, or automating security checks, my focus is always on delivering high-quality, secure products.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "When I\u2019m not coding, I enjoy watching educational videos, working out, and practicing piano."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "passion-section"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_passion_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: "Efficiency",
+    url: _images_speedometer_png__WEBPACK_IMPORTED_MODULE_5__["default"],
+    description: "Hi"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_passion_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: "Scalabilty",
+    url: "/icon.png",
+    description: "hi"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_passion_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: "Adaptability",
+    url: "/icon.png",
+    description: "hi"
+  }))));
 };
 const Head = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "Steven Vu");
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
@@ -2983,6 +3035,16 @@ function instanceOfHashable(object) {
 
 /***/ }),
 
+/***/ "./src/components/passion.scss":
+/*!*************************************!*\
+  !*** ./src/components/passion.scss ***!
+  \*************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "./node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack.development.js":
 /*!*******************************************************************************************!*\
   !*** ./node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack.development.js ***!
@@ -3629,6 +3691,21 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-server-dom-webpack.development.js */ "./node_modules/react-server-dom-webpack/cjs/react-server-dom-webpack.development.js");
 }
 
+
+/***/ }),
+
+/***/ "./src/images/speedometer.png":
+/*!************************************!*\
+  !*** ./src/images/speedometer.png ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAJDUlEQVR4Xu2cBawkRRCGuRCCu0vgHQ6BQCAQnMM1BCf44ZBgAUJwHhYguDsc7haCEzg8uLu7u0uA/zvewrLsdFfP9Ezvu+tKKvvedk9Xdf2tVTU7ZKxMSS0wJKn0LHysDEDiQZAByAAktkBi8XkGZAASWyCx+DwDMgCJLZBYfJ4BGYDEFkgsPs+ADEBiCyQWn2dABiCxBRKLzzMgA+C0wEwqXVg8q7hPPFQ8rXiyAZ6m4+mP9f/z4qfEL4qfEz+R2MZO8b04A9aXxiuKh4nnimS8kWrnLvGt4icjtRmlmV4BYG71ZlfxpuJJovSsuBFmxYXii8Wf1izL23xqAJaXhvuL+UxBN0ro6eI7UghHZioAVpLsg8RLpep4h9y79f/24jea1qdpAGYbGHErN91Ro7xTVO/wJpempgAYT506ULyf0RApq/0o4cuIGzk9NQHAAurMtWJGf6/T61JwM/EjTSlaNwC7qyMnVOzMg3r+AfGH4s8Hlocv9Am3TjFT6u8pxHxyZ4DnEC8ontMo/2jV6xf/bKwfpVpdAIwv7S4Vr1NCy2/1zHXiK8T3RjAIYKwhXlPcbe95Qd9vKW5kyem0Rx0AMBJvFi8WaHymP/sEhq+LuFUfIV5lQMBh+uQ0loxiAzCzesKZOuQG+4nq94vPbNAKbLJfibmUJaWYAEytnrB54a+xEGvtiWKOfT9YHkhch5nN/eXKmHrEAmBSKcVGOZ9RucdUbwPxO8b6qautKwUOFS8rZvOPRrEAYOQvatTqfNXbxlg3dTVG/anijcWAcH1shWIAcKyU2tOo2E6q1+Rab1SrazVOcOiKy5uDASBEp6oAsJmNFPva+V511hLfE70H8RtsH/W0zl1jHvGX8UX5DeeSybr/knh6j2IYH6fbM3V0IHKb3BfOFU/X1u7a+huvaS3kG7kuoWercDuDViuoDt7GXiYibCeJt+hQ8nL9v4lBcW7brxrq/a9KWQAWV0sPGQTSIQIfvUyrS7nzOkY9+n4m5j7DfcFFzO4bxH1iZnsQlQFgbEng+u67bHF62CVIm2YrF436lhYAQwjTReOq8FkxM+Ao8b6hXSgDAIGLszyC8KswS34LVaih+qtJzgViAvzd6DJ9SXjUR7g1Wi52+ooDMOhuUwaAtySkz6EZN1xivEGK+HoaqXxitcPte2tHe2RWcOr52iNzfpUz+tsp+LgaCgBrOgFtF+GCZkPrNVpVCrHWz+BRjJPQLQblH1WdRbrUAxhSY0wUCgDHTkZ3ET1eoJRJmZoqkWVxvNhy++bA0HkS6qbWbvqSmdSNgva+EABwLz/sMRL+9jtrMmSZZskvYsb6Rj1tc+FiDSce4SKSxThyEvPoRt/oS/aWXywKhwBwhhrc0dEoCU/423uBWOsZ9dsGKGM59dAcp7+XPe1urvJLLLJDAOA8zNGtiNZTAZGs1MSov0jsu6G360l9omJWIuAEYEV0nwrwnHrJCgDhvJscrTHtXOB4FYlQYUK1wajnmBxCxJrnFdMHKy2nir7bPaFQToxOsgLAqYbUwSJK7WIms45zPRG5UOJOcFvoQ6pP8i/H1SLiEsqGHAUAbr6MkiKyrp8+fULLGfW4w117k6vNESrcKlToQP1D9OmKJ7NMsXJUBgDP4EeedjAECU1NEssAo36WkkJZehjBvlNPUfPdLmLtdQmzTuTTzbIE+dZ/omGhGRA+vVzlHP/I4anqZyq79LTrxm3ftewRomX1KCQLAHvo6eMcbVC2VxWLBjxLAIgTS9lR3xIVa8+6Wg3yPkMRDVeB03NgAYCw3A4OIZw6zgkwYtmqZNjh5qhKH6gB9rOyS0+7fPYA9oIiOkYFe7sUtgDAcYv1tog4gdQdaiTXiJSQGIRP6PYYDakNomWuQP01Kif7o5AsAPj8P31qvU7PJ9lypITEIJxxIbdjn8yFVMGV0uj1jVkAeF9CZnRoMrnKfK5bX0eKysdRAT6aGJc8Tj0ETmImgXHZcr3UwcBkgFaaAWQDYOQisoBYFgDiybxcF4PqiE2TQeFK1MJ9Q51KxvvT0/s6AbBE3yzgkOlgSSCwtNVZp5J9LMb7XRKJAxcR5/K6cuo5659cxiptz9Sx9LSaZ2l0Be2xHctopRnwnZ523ei4KZPhXAdZInA+uZyeYi1jnbK4j7ztUOAnlU1QFQDeSuHNkyLiTM1JqQ4ivsBJoiyRPFDWT2SRyetXTzsqsn+6bOdNKaTtV8Su13yWVLklR8jSoW51OAWR+h5K7+oBBkfMU0+nDsP0hesOhO1cIVwTAAQXlnb0fkOVcSWvi4jlsomGUh2nnk4d8BC4ko29gRnLJkyqxUaO3jfhCxoh+SERq6DAeCiybfV9bhrek+Oty0KyANCvpw92tHG/ynCS1U1WXxBui9Y7YHXrRJKCyxN8gMpJ3qoEAL6MqxxteHf6iFYgD5MBwfLSSQwE4gNwU0QMpCg7Ah2wHf6gSgAM1dNvenrEHsErSk3RVBLUeh2Kk8ZrYgZCk2RJ08GFwz2kEgA8TKYwnS6i01Swc5O97wFZvjg5AXl8RU6y7AE04NuIOSoWJbr6dBis5YxsV+oL70+44iij+m0FgPejyBh2UZ03zl4DyZKWYrKHFQCC7tyI+dWTIrK+TdJrxiyjDxsriWhFZF4RrAAgyCf0D9UhbY+fHBidids12c8u2/G7Q648qn/sEwIAN17fW+JjwizgSO4MM6p8CbEvkXkUCCEAcN5lGXJ691ROro0veXWwzhBGvzPNROU4Jl1JbP/pewgAPHikeJ/Bar2G9B4uOc5UlHY9QgEgAPGe2Jvx1VBne00MGYQkahGIMVEoADTaL3b5hkyCR9NKXEa5lJqpDACMfmZBjEwFs6KDoCL7I66HX0N0LQMA7fMGCCmCmf61gPmtmHajlQWANliGWI4y/Z2mzs+fBVMVABBGah5vFo6pmzI/TcDI56cKSlFVABDKXsAPWhA1m11seSOxlLI98hDJvbi/CcPiH6uUFRgDgB6xy+BUIwOQGLcMQAYgsQUSi88zIAOQ2AKJxecZkAFIbIHE4vMMyAAktkBi8XkGZAASWyCx+DwDMgCJLZBYfJ4BGYDEFkgs/i9K2U9wUsXx3AAAAABJRU5ErkJggg==");
 
 /***/ }),
 
