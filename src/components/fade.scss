@@ -1,8 +1,8 @@
 .fade-in-up {
     opacity: 0;
-    transform: translateY(10vh);
+    transform: translateY(12vh);
     visibility: hidden;
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1.2s ease-out, transform 1.0s ease-out;
     
     &.show {
         opacity: 1;
