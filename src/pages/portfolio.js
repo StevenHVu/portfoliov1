@@ -1,7 +1,8 @@
 import * as React from 'react'
 import Layout from '../components/layout.js'
-import Footer from '../components/footer.js'
 import Fade from '../components/fade.js';
+import Footer from '../components/footer.js'
+
 import '../components/portfolio.scss';
 import Resume from '../components/resume.js'
 
@@ -26,6 +27,9 @@ const Portfolio = () => {
                 </div>
                 
                 <div className="resume-container">
+                    <Fade>
+                        <h2 className="resume-text">View My Résumé!</h2>
+                    </Fade>
                     <Fade delay={0.8}>
                       <Resume />
                     </Fade>

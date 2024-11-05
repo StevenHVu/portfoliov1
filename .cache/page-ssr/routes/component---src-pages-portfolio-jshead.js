@@ -2150,6 +2150,131 @@ const Layout = ({
 
 /***/ }),
 
+/***/ "./src/components/project.js":
+/*!***********************************!*\
+  !*** ./src/components/project.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_project_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/project.scss */ "./src/components/project.scss");
+/* harmony import */ var _components_project_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_project_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const Project = ({
+  title,
+  thumbnail,
+  description,
+  link
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "project-card"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: thumbnail,
+    alt: `${title} thumbnail`,
+    className: "project-thumbnail"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
+    className: "project-title"
+  }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "project-description"
+  }, description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: link,
+    className: "project-link",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "View Project"));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Project);
+
+/***/ }),
+
+/***/ "./src/components/project_grid.js":
+/*!****************************************!*\
+  !*** ./src/components/project_grid.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_project_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/project.js */ "./src/components/project.js");
+/* harmony import */ var _images_minecraft_server_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/minecraft_server.png */ "./src/images/minecraft_server.png");
+/* harmony import */ var _images_portfolio_website_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/portfolio_website.png */ "./src/images/portfolio_website.png");
+/* harmony import */ var _images_climate_data_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/climate_data.png */ "./src/images/climate_data.png");
+/* harmony import */ var _images_fresh_goods_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/fresh_goods.png */ "./src/images/fresh_goods.png");
+
+
+
+
+
+
+const ProjectsData = [{
+  title: "Automated Minecraft Server",
+  thumbnail: _images_minecraft_server_png__WEBPACK_IMPORTED_MODULE_2__["default"],
+  description: `This project involves setting up a fully automated and scalable Minecraft server on AWS EC2, using Infrastructure as Code (IaC) and CI/CD principles to manage server deployment and configuration.
+
+        The goal was to create a reliable, cost-effective Minecraft server hosted on AWS that could be easily deployed and maintained.
+
+        The project utilizes Terraform for infrastructure provisioning, and GitHub Actions to automate the deployment pipeline. By leveraging these tools, the server can be set up, destroyed, and redeployed with minimal effort, making it ideal for on-demand hosting or temporary game sessions.`,
+  link: "https://github.com/StevenHVu/AWS-EC2-Minecraft-Project"
+}, {
+  title: "Portfolio Website",
+  thumbnail: _images_portfolio_website_png__WEBPACK_IMPORTED_MODULE_3__["default"],
+  description: `This portfolio website highlights my expertise and projects with a polished, modern interface built using React, SCSS, and Bootstrap for responsive and adaptable design. 
+        
+        Bootstrap provides a structured, mobile-first layout with customized styles to fit the overall aesthetic. The site emphasizes security practices throughout its design and code structure to ensure privacy and data protection. 
+        
+        For continuous updates, I integrated GitHub Actions for automated deployment, maintaining efficient, reliable version control.`,
+  link: "https://github.com/StevenHVu/portfoliov1"
+}, {
+  title: "Tableau Climate Data",
+  thumbnail: _images_climate_data_png__WEBPACK_IMPORTED_MODULE_4__["default"],
+  description: `The Tableau dashboard project aims to create a user-friendly platform for accessing, analyzing, visualizing, and extracting data from a large SQL database containing over ten years of climate change data from Oregon State University’s Dr. Jillian Gregg’s research.
+        
+        The dashboard allows users to explore different variables and perform arithmetic calculations on them, troubleshoots any missing data values, as well as compare and analyze data to be used in the annual climate change reports and other publications.`,
+  link: "https://github.com/StevenHVu/Tableau-Climate-Data"
+}, {
+  title: "Grocery Store Relational Database",
+  thumbnail: _images_fresh_goods_png__WEBPACK_IMPORTED_MODULE_5__["default"],
+  description: "This front-end project works to demonstrate knowledge of relational databases. ",
+  // sql, mariadb, mysql, handlebars, express, query, RESTful API client
+  link: "https://github.com/StevenHVu/Grocery-Relational-Database-System/tree/master"
+}, {
+  title: "",
+  thumbnail: "",
+  description: "",
+  link: ""
+}, {
+  title: "",
+  thumbnail: "",
+  description: "",
+  link: ""
+}];
+const ProjectsGrid = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "projects-grid-container"
+  }, ProjectsData.map((project, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_project_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    key: index,
+    title: project.title,
+    thumbnail: project.thumbnail,
+    description: project.description,
+    link: project.link
+  })));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectsGrid);
+
+/***/ }),
+
 /***/ "./src/components/resume.js":
 /*!**********************************!*\
   !*** ./src/components/resume.js ***!
@@ -2174,7 +2299,7 @@ const ResumeButton = () => {
     href: _images_Steven_Vu_Cybersecurity_Resume_pdf__WEBPACK_IMPORTED_MODULE_2__["default"],
     download: "Steven_Vu_Resume",
     className: "resume-button"
-  }, "Download Resume");
+  }, "Download");
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ResumeButton);
 
@@ -2417,12 +2542,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout.js */ "./src/components/layout.js");
-/* harmony import */ var _components_footer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/footer.js */ "./src/components/footer.js");
-/* harmony import */ var _components_fade_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/fade.js */ "./src/components/fade.js");
+/* harmony import */ var _components_fade_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/fade.js */ "./src/components/fade.js");
+/* harmony import */ var _components_footer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/footer.js */ "./src/components/footer.js");
 /* harmony import */ var _components_portfolio_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/portfolio.scss */ "./src/components/portfolio.scss");
 /* harmony import */ var _components_portfolio_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_portfolio_scss__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_resume_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/resume.js */ "./src/components/resume.js");
 /* harmony import */ var _components_technology_grid_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/technology_grid.js */ "./src/components/technology_grid.js");
+/* harmony import */ var _components_project_grid_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/project_grid.js */ "./src/components/project_grid.js");
+
 
 
 
@@ -2441,7 +2568,7 @@ const Portfolio = () => {
     className: "experience-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "experience-title-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     delay: 0
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     className: "experience-title"
@@ -2449,11 +2576,13 @@ const Portfolio = () => {
     className: "technologies-grid-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_technology_grid_js__WEBPACK_IMPORTED_MODULE_6__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "resume-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "resume-text"
+  }, "View My R\xE9sum\xE9!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     delay: 0.8
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_resume_js__WEBPACK_IMPORTED_MODULE_5__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "project-container"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_footer_js__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_project_grid_js__WEBPACK_IMPORTED_MODULE_7__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_footer_js__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 const Head = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "Portfolio");
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Portfolio);
@@ -3338,6 +3467,16 @@ function instanceOfHashable(object) {
 
 /***/ }),
 
+/***/ "./src/components/project.scss":
+/*!*************************************!*\
+  !*** ./src/components/project.scss ***!
+  \*************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "./src/components/resume.scss":
 /*!************************************!*\
   !*** ./src/components/resume.scss ***!
@@ -4037,6 +4176,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/images/climate_data.png":
+/*!*************************************!*\
+  !*** ./src/images/climate_data.png ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/static/climate_data-eebf2403b95ea97bd7214689eca6d2d2.png");
+
+/***/ }),
+
 /***/ "./src/images/css_icon.svg":
 /*!*********************************!*\
   !*** ./src/images/css_icon.svg ***!
@@ -4094,6 +4248,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xMiAzSDlDNy4zNDMxNSAzIDYgNC4zNDMxNSA2IDZDNiA3LjY1Njg1IDcuMzQzMTUgOSA5IDlNMTIgM1Y5TTEyIDNIMTVDMTYuNjU2OSAzIDE4IDQuMzQzMTUgMTggNkMxOCA3LjY1Njg1IDE2LjY1NjkgOSAxNSA5TTEyIDlIOU0xMiA5SDE1TTEyIDlWMTVNOSA5QzcuMzQzMTUgOSA2IDEwLjM0MzEgNiAxMkM2IDEzLjY1NjkgNy4zNDMxNSAxNSA5IDE1TTE1IDlDMTYuNjU2OSA5IDE4IDEwLjM0MzEgMTggMTJDMTggMTMuNjU2OSAxNi42NTY5IDE1IDE1IDE1QzEzLjM0MzEgMTUgMTIgMTMuNjU2OSAxMiAxMkMxMiAxMC4zNDMxIDEzLjM0MzEgOSAxNSA5Wk0xMiAxNUg5TTEyIDE1VjE4QzEyIDE5LjY1NjkgMTAuNjU2OSAyMSA5IDIxQzcuMzQzMTUgMjEgNiAxOS42NTY5IDYgMThDNiAxNi4zNDMxIDcuMzQzMTUgMTUgOSAxNSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPC9zdmc+");
+
+/***/ }),
+
+/***/ "./src/images/fresh_goods.png":
+/*!************************************!*\
+  !*** ./src/images/fresh_goods.png ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/static/fresh_goods-64d473cc6cfb5de3c81c423fdac85492.png");
 
 /***/ }),
 
@@ -4232,6 +4401,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/images/minecraft_server.png":
+/*!*****************************************!*\
+  !*** ./src/images/minecraft_server.png ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/static/minecraft_server-b86d7510159d4db02b1a6a2c82c70b19.png");
+
+/***/ }),
+
 /***/ "./src/images/mongodb_icon.svg":
 /*!*************************************!*\
   !*** ./src/images/mongodb_icon.svg ***!
@@ -4274,6 +4458,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0ibm9uemVybyIgY2xpcC1ydWxlPSJub256ZXJvIiBkPSJNNy41ODYzOCAwLjEwMjE2NkM3LjgxOTkgLTAuMDM0MDU1MyA4LjEwODY3IC0wLjAzNDA1NTMgOC4zNDIxOSAwLjEwMjE2NkwxNC41NTY1IDMuNzI3MTdDMTQuNzg2OSAzLjg2MTU3IDE0LjkyODYgNC4xMDgyNSAxNC45Mjg2IDQuMzc1VjExLjYyNUMxNC45Mjg2IDExLjg5MTggMTQuNzg2OSAxMi4xMzg0IDE0LjU1NjUgMTIuMjcyOEw4LjM0MjE5IDE1Ljg5NzhDOC4xMDg2NyAxNi4wMzQxIDcuODE5OSAxNi4wMzQxIDcuNTg2MzggMTUuODk3OEw2LjAzMjgxIDE0Ljk5MTZDNS42NzUwMiAxNC43ODI5IDUuNTU0MTcgMTQuMzIzNiA1Ljc2Mjg4IDEzLjk2NThDNS45NzE1OSAxMy42MDgxIDYuNDMwODMgMTMuNDg3MiA2Ljc4ODYyIDEzLjY5NTlMNy45NjQyOSAxNC4zODE3TDEzLjQyODYgMTEuMTk0MlY0LjgwNTc4TDcuOTY0MjkgMS42MTgyOEwyLjUgNC44MDU3OFYxMS4xOTQyTDMuNjE2OCAxMS44NDU3QzMuOTYwOTggMTEuOTU2MSA0LjM4NjExIDExLjk4MzEgNC42ODU3NiAxMS44NTA3QzQuODI0NzcgMTEuNzg5MyA0Ljk1MDMxIDExLjY4OTMgNS4wNDk2OCAxMS41MTA3QzUuMTU0MjYgMTEuMzIyNyA1LjI1IDExLjAwOTggNS4yNSAxMC41VjUuMjVDNS4yNSA0LjgzNTc5IDUuNTg1NzkgNC41IDYgNC41QzYuNDE0MjEgNC41IDYuNzUgNC44MzU3OSA2Ljc1IDUuMjVWMTAuNUM2Ljc1IDExLjE5MDIgNi42MjEwNCAxMS43NzE2IDYuMzYwNDcgMTIuMjM5OUM2LjA5NDcxIDEyLjcxNzYgNS43MTQ2NiAxMy4wMzYgNS4yOTE5MiAxMy4yMjI4QzQuNDg1NjIgMTMuNTc5IDMuNTk1MjMgMTMuNDMzIDMuMDQ5OTkgMTMuMjM3MUMzLjAwNjg2IDEzLjIyMTYgMi45NjUyNSAxMy4yMDIyIDIuOTI1NjcgMTMuMTc5MUwxLjM3MjEgMTIuMjcyOEMxLjE0MTY4IDEyLjEzODQgMSAxMS44OTE4IDEgMTEuNjI1VjQuMzc1QzEgNC4xMDgyNSAxLjE0MTY4IDMuODYxNTcgMS4zNzIxIDMuNzI3MTdMNy41ODYzOCAwLjEwMjE2NlpNOC4yNDY1NSA1LjI4MzIzQzguNjQzMzkgNC44MTA4MSA5LjI2MzE4IDQuNSAxMC4xMDQyIDQuNUMxMC44ODQ3IDQuNSAxMS40NzkyIDQuNzY3NTYgMTEuODgxNSA1LjE5MzE0QzEyLjE2NiA1LjQ5NDE3IDEyLjE1MjcgNS45Njg4NSAxMS44NTE2IDYuMjUzMzhDMTEuNTUwNiA2LjUzNzkyIDExLjA3NTkgNi41MjQ1NSAxMC43OTE0IDYuMjIzNTJDMTAuNzAzOCA2LjEzMDg3IDEwLjUyMDIgNiAxMC4xMDQyIDZDOS42NjE4MiA2IDkuNDc5NTIgNi4xNDc1MyA5LjM5NTExIDYuMjQ4MDJDOS4yODYxNSA2LjM3Nzc0IDkuMjUgNi41NDE4NCA5LjI1IDYuNjI1QzkuMjUgNi43MDgxNiA5LjI4NjE1IDYuODcyMjYgOS4zOTUxMSA3LjAwMTk4QzkuNDc5NTIgNy4xMDI0NyA5LjY2MTgyIDcuMjUgMTAuMTA0MiA3LjI1QzEwLjE3ODIgNy4yNSAxMC4yNDk3IDcuMjYwNzMgMTAuMzE3MyA3LjI4MDcyQzEwLjkzNjggNy4zNzAwMSAxMS40MDg5IDcuNjQ3ODQgMTEuNzMyNiA4LjAzMzIzQzEyLjEwNDkgOC40NzY0MyAxMi4yMjkyIDguOTk5ODMgMTIuMjI5MiA5LjM3NUMxMi4yMjkyIDkuNzUwMTcgMTIuMTA0OSAxMC4yNzM2IDExLjczMjYgMTAuNzE2OEMxMS4zMzU4IDExLjE4OTIgMTAuNzE2IDExLjUgOS44NzUwMSAxMS41QzkuMDk0NSAxMS41IDguNDk5OTYgMTEuMjMyNCA4LjA5NzY4IDEwLjgwNjlDNy44MTMxNSAxMC41MDU4IDcuODI2NTIgMTAuMDMxMSA4LjEyNzU1IDkuNzQ2NjJDOC40Mjg1NyA5LjQ2MjA4IDguOTAzMjUgOS40NzU0NiA5LjE4Nzc5IDkuNzc2NDhDOS4yNzUzNiA5Ljg2OTEzIDkuNDU5IDEwIDkuODc1MDEgMTBDMTAuMzE3NCAxMCAxMC40OTk3IDkuODUyNDcgMTAuNTg0MSA5Ljc1MTk4QzEwLjY5MyA5LjYyMjI2IDEwLjcyOTIgOS40NTgxNiAxMC43MjkyIDkuMzc1QzEwLjcyOTIgOS4yOTE4NCAxMC42OTMgOS4xMjc3NCAxMC41ODQxIDguOTk4MDJDMTAuNDk5NyA4Ljg5NzUzIDEwLjMxNzQgOC43NSA5Ljg3NTAxIDguNzVDOS44MDA5NyA4Ljc1IDkuNzI5NDMgOC43MzkyNyA5LjY2MTg4IDguNzE5MjhDOS4wNDIzNyA4LjYyOTk5IDguNTcwMjggOC4zNTIxNiA4LjI0NjU1IDcuOTY2NzdDNy44NzQyNyA3LjUyMzU3IDcuNzUgNy4wMDAxNyA3Ljc1IDYuNjI1QzcuNzUgNi4yNDk4MyA3Ljg3NDI3IDUuNzI2NDMgOC4yNDY1NSA1LjI4MzIzWiIgZmlsbD0iIzAwMDAwMCIvPg0KPC9zdmc+");
+
+/***/ }),
+
+/***/ "./src/images/portfolio_website.png":
+/*!******************************************!*\
+  !*** ./src/images/portfolio_website.png ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/static/portfolio_website-d4d2baae529453c5681f902d1086f783.png");
 
 /***/ }),
 

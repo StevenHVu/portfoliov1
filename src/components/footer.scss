@@ -1,5 +1,10 @@
 .footer {
-    background-color: #333;
+    background-image: url("/background_gif.gif");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
     color: #fff;
     padding: 20px;
     text-align: center;

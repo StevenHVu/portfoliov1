@@ -2,8 +2,9 @@ import * as React from 'react';
 import Layout from '../components/layout.js';
 import '../components/about.scss';
 import Fade from '../components/fade.js';
-import PassionEntry from '../components/passion.js';
 import Footer from '../components/footer.js'
+import PassionEntry from '../components/passion.js';
+
 // import scrollTo from 'gatsby-plugin-smoothscroll';
 
 // importing passion sections icons
@@ -24,7 +25,7 @@ const About = () => {
                     <h2 className="h2-about">Aspiring Software Engineer</h2>
                 </Fade>
                 <Fade delay={1.2}>
-                    <h2 className="h2-about">Security Enthusiast</h2>
+                    <h2 className="h2-about">Security-Driven Developer</h2>
                 </Fade>
                 {/* <Fade delay={1.8}>
                     <a href="#profile-section" className="arrow-container" onClick={() => {

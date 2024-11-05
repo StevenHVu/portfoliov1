@@ -2191,11 +2191,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_about_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/about.scss */ "./src/components/about.scss");
 /* harmony import */ var _components_about_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_about_scss__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_fade_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/fade.js */ "./src/components/fade.js");
-/* harmony import */ var _components_passion_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/passion.js */ "./src/components/passion.js");
-/* harmony import */ var _components_footer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/footer.js */ "./src/components/footer.js");
+/* harmony import */ var _components_footer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/footer.js */ "./src/components/footer.js");
+/* harmony import */ var _components_passion_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/passion.js */ "./src/components/passion.js");
 /* harmony import */ var _images_adaptability_icon_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/adaptability_icon.png */ "./src/images/adaptability_icon.png");
 /* harmony import */ var _images_efficiency_icon_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/efficiency_icon.png */ "./src/images/efficiency_icon.png");
 /* harmony import */ var _images_scalability_icon_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../images/scalability_icon.png */ "./src/images/scalability_icon.png");
+
 
 
 
@@ -2223,7 +2224,7 @@ const About = () => {
     delay: 1.2
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     className: "h2-about"
-  }, "Security Enthusiast"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Security-Driven Developer"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "profile-section",
     id: "profile-section"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
@@ -2234,19 +2235,19 @@ const About = () => {
     alt: "profile"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Hi, I\u2019m Steven Vu, a software developer that has a passion for building secure, scalable, and efficient solutions. I graduated with a B.S. in Computer Science and a Certificate of Cybersecurity from Oregon State University. I specialize in DevSecOps, integrating security at every step of development to ensure robust and reliable software.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "From planning and writing code to automating deployments and monitoring systems, I enjoy the process of converting theoretical ideas into reality. I believe that security should empower innovation, not hinder it, and I aim to bridge the gap between fast development and strong security practices. Whether I\u2019m developing APIs, setting up CI/CD pipelines, or automating security checks, my focus is always on delivering high-quality, secure products.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "When I\u2019m not coding, I enjoy watching educational videos, working out, and practicing piano."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "passion-section"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_passion_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_passion_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     title: "Adaptability",
     url: _images_adaptability_icon_png__WEBPACK_IMPORTED_MODULE_6__["default"],
     description: "In a fast-evolving tech landscape, I embrace change as a constant, staying ahead of trends and responding quickly to new challenges. Whether it’s adapting to a new programming language, troubleshooting unexpected issues, or rethinking solutions based on feedback, I thrive in environments that require flexibility and creativity."
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_passion_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_passion_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     title: "Efficiency",
     url: _images_efficiency_icon_png__WEBPACK_IMPORTED_MODULE_7__["default"],
     description: "I prioritize efficiency in every aspect of my work, from clean code practices to streamlined processes that reduce redundancy. By focusing on optimization and continuous improvement, I aim to build solutions that minimize resource use while maximizing output."
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_passion_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_fade_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_passion_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     title: "Scalabilty",
     url: _images_scalability_icon_png__WEBPACK_IMPORTED_MODULE_8__["default"],
     description: "I design solutions with scalability in mind, anticipating the growth and changes that a successful project requires. By planning for growth from the outset, I ensure that my projects can evolve alongside the needs of the business or user base, delivering consistent performance and flexibility as they scale."
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_footer_js__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_footer_js__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 };
 const Head = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "Steven Vu");
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);

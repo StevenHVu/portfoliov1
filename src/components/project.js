@@ -1,4 +1,5 @@
 import React from 'react';
+import '../components/project.scss'
 
 const Project = ({ title, thumbnail, description, link }) => {
     return (
